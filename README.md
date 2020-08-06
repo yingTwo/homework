@@ -1,1 +1,2 @@
-##第一次学习pycharm
+##第一次作业
+./FistHw_game
