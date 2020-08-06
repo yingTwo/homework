@@ -10,7 +10,7 @@ def fight(e,a,b,c,d):
         e = e + 1    #w初始值为0，进入循环后先加1，后续只要循环继续就会加1
         c = random.randint(1,100)  #randint(1,100)生成整数型的随机数，生成随机的攻击力
         d = random.randint(1,100)
-        print("第%s回合，我的血量：%s，我的攻击力：%s\n你的血量：%s，你的攻击力%s" %(e,a,b,c,d))
+        print("第%s回合，我的血量：%s，我的攻击力：%s\n你的血量：%s，你的攻击力%s" %(e,a,c,b,d))
         #输出每回合的双方血量和攻击力
         a = a - d  # 我的血量=我的上一回的血量（第一回合为初始血量）-对方的攻击力
         b = b - c  # 对方的血量=对方的上一回的血量（第一回合为初始血量）-我的攻击力
@@ -23,10 +23,11 @@ def fight(e,a,b,c,d):
     print("游戏结束！游戏进行了%s回合"%(e))  #输出游戏结束且总共的游戏回合数
 
 def game():
+    #血量初始值为1000，攻击力初始值为200（但攻击力初始值对后续程序来说没用，攻击力采用了随机数）
     my_hp = 1000
     your_hp = 1000
-    my_power = 0
-    your_power = 0
+    my_power = 200
+    your_power = 200
     w = 0
     fight(w, my_hp, your_hp, my_power, your_power)
 
